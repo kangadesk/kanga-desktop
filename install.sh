@@ -17,8 +17,11 @@ sudo apt-get install -y python3-gpiozero
 
 #Download Python Script
 cd /opt/
-sudo mkdir kangadesk/pi
+sudo mkdir kangadesk
+cd /opt/kangadesk/
+sudo mkdir pi
 cd /opt/kangadesk/pi
+
 script=shutdown.py
 
 if [ -e $script ];
