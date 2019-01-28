@@ -26,7 +26,7 @@ if [ -e $script ];
 	then
 		echo "Script Shutdown.py already exists. Doing nothing."
 	else
-		wget "https://raw.githubusercontent.com/kangadesk/kanga-pi/master/Shutdown.py"
+		wget "https://raw.githubusercontent.com/kangadesk/kanga-pi/master/shutdown.py"
 fi
 #
 
@@ -38,13 +38,13 @@ if grep -q "sudo python3 \/opt\/KangaPi\/Shutdown.py \&" "$RC";
 	then
 		echo "File /etc/rc.local already configured. Doing nothing."
 	else
-		sed -i -e "s/^exit 0/sudo python3 \/opt\/KangaPi\/Shutdown.py \&\n&/g" "$RC"
+		sed -i -e "s/^exit 0/sudo python3 \/opt\/KangaPi\/shutdown.py \&\n&/g" "$RC"
 		echo "File /etc/rc.local configured."
 fi
 #
 
 #Reboot
-echo "KangaPi installation complete. Enjoy! System will now reboot in 3 seconds."
+echo "Kangadesk installation complete. Enjoy! System will now reboot in 9 seconds."
 sleep 3
 sudo reboot
 #
