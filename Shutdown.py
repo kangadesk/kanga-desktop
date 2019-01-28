@@ -1,19 +1,25 @@
 #!/usr/bin/env python3
 import RPi.GPIO as GPIO
 import time
-import os
-import signal
+import subprocess
 
-print "Power Button Monitor."
+# GPIO pin outs
 
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BOARD)  
 
-GPIO.setup(21, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
+# use the same pin that is used for the reset button
+GPIO.setup(5, GPIO.IN, pull_up_down = GPIO.PUD_UP)  
 
-def button_pressed(channel):
-    print "Button pushed"
-    os.system("sudo shutdown now")
-    
-GPIO.add_event_detect(21, GPIO.RISING, callback=button_pressed, bouncetime=300)
+oldButtonState1 = True
 
-signal.pause()
+while True:
+    #grab the current button state
+    buttonState1 = GPIO.input(5)
+
+    # check to see if button has been pushed
+    if buttonState1 != oldButtonState1 and buttonState1 == False:
+      subprocess.call("shutdown -h now", shell=True, 
+        stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+      oldButtonState1 = buttonState1
+
+    time.sleep(.1)
