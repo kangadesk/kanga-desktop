@@ -43,6 +43,7 @@ fi
 #
 
 #Reboot
+wget /opt/kangadesk/pi "https://raw.githubusercontent.com/kangadesk/kanga-pi/master/README.md"
 echo "Kangadesk Pi Addons Install Complete. Enjoy! System will now reboot in 10 seconds."
 sleep 10
 sudo reboot
