@@ -65,12 +65,9 @@ fi
 #
 
 #
-cd /home/
-sudo mkdir kangadesk
-cd /home/kangadesk
-wget -O -O https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/README.md https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/720677.jpg
-pcmanfm --set-wallpaper /home/kangadesk/720677.jpg----
-sudo cp /home/kangadesk/720677.jpg /usr/share/plymouth/themes/pix/splash.png
+wget -O /opt/kangadesk/ "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/720677.jpg"
+pcmanfm --set-wallpaper="/opt/kangadesk/720677.jpg"
+sudo cp /opt/kangadesk/720677.jpg /usr/share/plymouth/themes/pix/splash.png
 #
 
 } | whiptail --gauge "Please wait while installing" 6 60 0
