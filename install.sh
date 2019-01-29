@@ -25,7 +25,7 @@ if [ -e $script ];
 	then
 		echo "Shutdown Script already exists. Doing nothing."
 	else
-		wget "https://raw.githubusercontent.com/kangadesk/kanga-pi/master/shutdown.py"
+		wget "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/shutdown.py"
 fi
 #
 
@@ -42,8 +42,15 @@ if grep -q "sudo python3 \/opt\/kangadesk\/shutdown.py \&" "$RC";
 fi
 #
 
+#Additional Steps
+cd /home/
+sudo mkdir kangadesk
+cd /home/kangadesk
+wget  "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/README.md"
+#
+
 #Reboot
-echo "Kangadesk Pi Addons Install Complete. Enjoy! System will now reboot in 10 seconds."
-sleep 10
+echo "Kangadesk Mate Addons Installed Successfully. Enjoy! System will now reboot in 7 seconds."
+sleep 7
 sudo reboot
 #
