@@ -55,10 +55,6 @@ sudo mkdir kangadesk
 cd /home/pi/kangadesk
 curl -O -O https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/README.md https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/720677.jpg
 
-#pcmanfm --set-wallpaper /home/pi/kangadesk/720677.jpg----
-
-sudo cp /home/pi/kangadesk/720677.jpg /usr/share/plymouth/themes/pix/splash.png
-
 cd /boot/
 File=config.txt
 if grep -q "disable_splash=1" "$File";
