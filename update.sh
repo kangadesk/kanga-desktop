@@ -11,7 +11,7 @@ fi
 whiptail --title "Kangadesk Setup" --msgbox "Click OK to update the necessary addon packages for your Kangadesk Mate." 10 60
 #
 
-#
+#System Package Progress
 {
     for ((i = 0 ; i <= 100 ; i+=5)); do
         sleep 1
@@ -29,7 +29,7 @@ sudo apt-get install -y python3-gpiozero
 
 }| whiptail --gauge "Updating System Packages" 6 60 0
 
-#
+#Update Firmware Progress
 {
     for ((i = 0 ; i <= 100 ; i+=20)); do
         sleep 1
@@ -76,7 +76,7 @@ fi
 
 }| whiptail --gauge "Updating Firmware" 6 60 0
 
-#
+#Moving Files Progress
 {
     for ((i = 0 ; i <= 100 ; i+=20)); do
         sleep 1
@@ -96,7 +96,7 @@ if grep -q "disable_splash=1" "$File";
 fi
 #
 
-#
+#Wallpaper Setup Files
 cd /usr/share/
 directory="/usr/share/rpd-wallpaper"
 
