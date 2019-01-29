@@ -9,7 +9,6 @@ fi
 
 #Update Repository
 sudo apt-get update -y
-sudo apt-get install libnotify-bin notification-daemon dbus
 #
 
 #gpiozero Module Install
@@ -64,8 +63,7 @@ fi
 #
 
 #Reboot Kangadesk Mate
-notify-send 'Rebooting...' 'Addons Installed Successfully'
-echo "Kangadesk Mate Addons Installed Successfully. For More Info, Please Visit www.kangadesk.com"
+whiptail --title "System Setup Complete" --msgbox "Kangadesk Mate Addons Installed Successfully. For More Info, Please Visit www.kangadesk.com. Click OK To Reboot" 10 60
 echo "Your System will now reboot in 5 seconds."
 sleep 5
 sudo reboot
