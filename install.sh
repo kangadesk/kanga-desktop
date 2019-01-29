@@ -14,8 +14,8 @@ whiptail --title "Kangadesk Setup" --msgbox "Click OK to install the necessary a
 
 echo percentage | dialog --gauge "text" height width percent
 echo "10" | dialog --gauge "Please wait" 10 70 0
-echo "50" | dialog --gauge "Please wait" 10 70 0
-echo "100" | dialog --gauge "Please wait" 10 70 0
+
+
 
 
 
@@ -26,6 +26,10 @@ sudo apt-get update -y
 #gpiozero Module Install
 sudo apt-get install -y python3-gpiozero
 #
+
+
+echo "50" | dialog --gauge "Please wait" 10 70 0
+
 
 #Create Directory
 cd /opt/
@@ -64,6 +68,10 @@ if grep -q "sudo python3 \/opt\/kangadesk\/shutdown.py \&" "$RC";
 		echo "File /etc/rc.local configured."
 fi
 #
+
+
+echo "100" | dialog --gauge "Please wait" 10 70 0
+
 
 #Custom Screen Settings
 cd /boot/
