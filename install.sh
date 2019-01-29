@@ -9,6 +9,7 @@ fi
 
 #Update Repository
 sudo apt-get update -y
+sudo apt-get install libnotify-bin notification-daemon dbus
 #
 
 #gpiozero Module Install
