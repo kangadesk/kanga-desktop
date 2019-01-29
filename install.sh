@@ -13,7 +13,7 @@ whiptail --title "Kangadesk Setup" --msgbox "Click OK to install the necessary a
 
 #
 {
-    for ((i = 0 ; i <= 100 ; i+=10)); do
+    for ((i = 0 ; i <= 100 ; i+=5)); do
         sleep 1
         echo $i
     done
@@ -90,7 +90,8 @@ fi
 sudo mkdir rpd-wallpaper
 cd /usr/share/rpd-wallpaper
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/wallpaper.jpg"
-sudo cp /usr/share/rpd-wallpaper/wallpaper.jpg /usr/share/plymouth/themes/pix/splash.png
+mv wallpaper.jpg road.jpg
+sudo cp /usr/share/rpd-wallpaper/road.jpg /usr/share/plymouth/themes/pix/splash.png
 #
 
 #
