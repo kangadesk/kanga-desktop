@@ -78,7 +78,7 @@ fi
 
 #
 cd /usr/share/rpd-wallpaper/
-wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/wallpaper.jpg" -O /usr/share/rpd-wallpaper/
+wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/wallpaper.jpg"
 mv wallpaper.jpg road.jpg
 sudo cp /usr/share/rpd-wallpaper/road.jpg /usr/share/plymouth/themes/pix/splash.png
 #
