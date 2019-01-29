@@ -125,7 +125,7 @@ fi
 sudo mkdir rpd-wallpaper
 cd /usr/share/rpd-wallpaper
 #wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/road.jpg"
-sudo cp -r https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper /usr/share/rpd-wallpaper
+wget -q https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper
 #mv wallpaper.jpg road.jpg
 sudo cp /usr/share/rpd-wallpaper/road.jpg /usr/share/plymouth/themes/pix/splash.png
 #
