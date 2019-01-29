@@ -39,6 +39,7 @@ fi
 #Install SafePowerOff Script
 cd /opt/kangadesk
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/720677.jpg"
+sudo cp /opt/kangadesk/720677.jpg /usr/share/plymouth/themes/pix/splash.png
 script=shutdown.py
 
 if [ -e $script ];
@@ -74,11 +75,7 @@ if grep -q "disable_splash=1" "$File";
 fi
 #
 
-#
-sudo cp /opt/kangadesk/720677.jpg /usr/share/plymouth/themes/pix/splash.png
-#
-
-} | whiptail --gauge "Please wait while installing" 6 60 0
+} | whiptail --gauge "Installing Necessary Addons" 6 60 0
 
 #Reboot Kangadesk Mate
 whiptail --title "Setup Complete" --msgbox "Addons Installed Successfully. For More Info, Please Visit www.kangadesk.com. Click OK To Reboot" 10 60
