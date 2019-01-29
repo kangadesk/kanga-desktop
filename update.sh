@@ -8,7 +8,7 @@ fi
 #
 
 #Welcome Message
-whiptail --title "Kangadesk Setup" --msgbox "Click OK to upgrade the necessary addon packages for your Kangadesk Mate." 10 60
+whiptail --title "Kangadesk Setup" --msgbox "Click OK to update the necessary addon packages for your Kangadesk Mate." 10 60
 #
 
 #
