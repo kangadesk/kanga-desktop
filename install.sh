@@ -16,9 +16,7 @@ whiptail --title "Kangadesk Setup" --msgbox "Click OK to install the necessary a
         sleep 1
         echo $i
     done
-    
-}
-
+        
 #Update Repository
 sudo apt-get update -y
 #
@@ -65,6 +63,8 @@ if grep -q "sudo python3 \/opt\/kangadesk\/shutdown.py \&" "$RC";
 fi
 #
 
+| dialog --gauge "Please wait" 6 60 0
+
 #Custom Screen Settings
 cd /boot/
 File=config.txt
@@ -77,7 +77,7 @@ if grep -q "disable_splash=1" "$File";
 fi
 #
 
-| whiptail --gauge "Installing Necessary Addons" 6 60 0
+}| whiptail --gauge "Installing Necessary Addons" 6 60 0
 
 #Reboot Kangadesk Mate
 whiptail --title "Setup Complete" --msgbox "Addons Installed Successfully. For More Info, Please Visit www.kangadesk.com. Click OK To Reboot" 10 60
