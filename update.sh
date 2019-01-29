@@ -120,7 +120,7 @@ sudo cp /usr/share/rpd-wallpaper/road.jpg /usr/share/plymouth/themes/pix/splash.
 
 #Reboot Kangadesk Mate
 whiptail --title "Setup Complete" --msgbox "Addons Installed Successfully. For More Info, Please Visit www.kangadesk.com. Click OK To Reboot" 10 60
-echo "Your System will now reboot in 4 seconds."
-sleep 4
+#echo "Your System will now reboot in 4 seconds."
+#sleep 4
 sudo reboot
 #
