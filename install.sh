@@ -45,8 +45,7 @@ fi
 #Additional Steps
 cd /home/pi/
 sudo mkdir kangadesk
-cd /kangadesk/
-
+cd /home/pi/kangadesk
 curl -O -O https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/README.md https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/720677.jpg
 
 pcmanfm --set-wallpaper /home/pi/kangadesk/720677.jpg
