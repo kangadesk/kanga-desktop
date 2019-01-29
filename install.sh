@@ -13,7 +13,7 @@ whiptail --title "Kangadesk Setup" --msgbox "Click OK to install the necessary a
 
 
 echo percentage | dialog --gauge "text" height width percent
-echo "10" | dialog --gauge "Please wait" 10 70 0
+
 
 
 
@@ -22,6 +22,14 @@ echo "10" | dialog --gauge "Please wait" 10 70 0
 #Update Repository
 sudo apt-get update -y
 #
+
+
+
+
+echo "10" | dialog --gauge "Please wait" 10 70 0
+
+
+
 
 #gpiozero Module Install
 sudo apt-get install -y python3-gpiozero
