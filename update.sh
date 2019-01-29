@@ -20,11 +20,21 @@ whiptail --title "Kangadesk Setup" --msgbox "Click OK to update the necessary ad
 #
 
 #Update Repository
-sudo apt-get update -y
+sudo apt-get update -y && sudo apt-get -y upgrade
 #
 
 #gpiozero Module Install
 sudo apt-get install -y python3-gpiozero
+#
+
+}| whiptail --gauge "Updating System Packages" 6 60 0
+
+#
+{
+    for ((i = 0 ; i <= 100 ; i+=20)); do
+        sleep 1
+        echo $i
+    done
 #
 
 #Create Directory
@@ -64,6 +74,16 @@ if grep -q "sudo python3 \/opt\/kangadesk\/shutdown.py \&" "$RC";
 fi
 #
 
+}| whiptail --gauge "Updating Firmware" 6 60 0
+
+#
+{
+    for ((i = 0 ; i <= 100 ; i+=20)); do
+        sleep 1
+        echo $i
+    done
+#
+
 #Custom Screen Settings
 cd /boot/
 File=config.txt
@@ -100,8 +120,6 @@ sudo cp /usr/share/rpd-wallpaper/road.jpg /usr/share/plymouth/themes/pix/splash.
 
 #Reboot Kangadesk Mate
 whiptail --title "Setup Complete" --msgbox "Addons Installed Successfully. For More Info, Please Visit www.kangadesk.com. Click OK To Reboot" 10 60
-
-sudo apt-get -y upgrade
 echo "Your System will now reboot in 4 seconds."
 sleep 4
 sudo reboot
