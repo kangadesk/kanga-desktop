@@ -9,13 +9,15 @@ fi
 
 #Welcome Message
 whiptail --title "Kangadesk Setup" --msgbox "Click OK to install the necessary addon packages for your Kangadesk Mate." 10 60
-
-{
-    for ((i = 0 ; i <= 100 ; i+=10)); do
-        sleep 1
-        echo $i
-    done
 #
+
+
+echo percentage | dialog --gauge "text" height width percent
+echo "10" | dialog --gauge "Please wait" 10 70 0
+echo "50" | dialog --gauge "Please wait" 10 70 0
+echo "100" | dialog --gauge "Please wait" 10 70 0
+
+
 
 #Update Repository
 sudo apt-get update -y
@@ -75,7 +77,11 @@ if grep -q "disable_splash=1" "$File";
 fi
 #
 
-} | whiptail --gauge "Installing Necessary Addons" 6 60 0
+
+
+for i in $(seq 0 10 100) ; do sleep 1; echo $i | dialog --gauge "Please wait" 10 70 0; done
+
+
 
 #Reboot Kangadesk Mate
 whiptail --title "Setup Complete" --msgbox "Addons Installed Successfully. For More Info, Please Visit www.kangadesk.com. Click OK To Reboot" 10 60
