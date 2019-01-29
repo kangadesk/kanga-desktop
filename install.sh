@@ -16,7 +16,6 @@ sudo apt-get update -y
         sleep 1
         echo $i
     done
-} | whiptail --gauge "Please wait while installing" 6 60 0
 
 #gpiozero Module Install
 sudo apt-get install -y python3-gpiozero
@@ -68,6 +67,8 @@ if grep -q "disable_splash=1" "$File";
 		echo "Rainbow Screen disabled."
 fi
 #
+
+} | whiptail --gauge "Please wait while installing" 6 60 0
 
 #Reboot Kangadesk Mate
 whiptail --title "Setup Complete" --msgbox "Addons Installed Successfully. For More Info, Please Visit www.kangadesk.com. Click OK To Reboot" 10 60
