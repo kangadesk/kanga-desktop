@@ -11,7 +11,7 @@ fi
 whiptail --title "Kangadesk Setup" --msgbox "Click OK to update the necessary addon packages for your Kangadesk Mate." 10 60
 #
 
-#System Package Progress
+#Fetching Updates Progress
 {
     for ((i = 0 ; i <= 100 ; i+=5)); do
         sleep 1
@@ -19,8 +19,23 @@ whiptail --title "Kangadesk Setup" --msgbox "Click OK to update the necessary ad
     done
 #
 
+#Fetch Updates
+sudo apt-get -y update
+#
+
+}| whiptail --gauge "Fetching Updates" 6 60 0
+
+
+#System Package Progress
+{
+    for ((i = 0 ; i <= 100 ; i+=.5)); do
+        sleep 1
+        echo $i
+    done
+#
+
 #Update Repository
-sudo apt-get update -y && sudo apt-get -y upgrade
+sudo apt-get -y upgrade
 #
 
 #gpiozero Module Install
