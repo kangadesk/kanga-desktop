@@ -28,7 +28,7 @@ sudo apt-get -y update
 
 #System Package Progress
 {
-    for ((i = 0 ; i <= 100 ; i+=.5)); do
+    for ((i = 0 ; i <= 100 ; i+=1)); do
         sleep 1
         echo $i
     done
