@@ -35,7 +35,7 @@ sudo apt-get -y update
 #
 
 #Update Repository
-sudo apt-get -y upgrade
+sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade
 #
 
 #gpiozero Module Install
@@ -131,6 +131,20 @@ sudo cp /usr/share/rpd-wallpaper/road.jpg /usr/share/plymouth/themes/pix/splash.
 
 #
 }| whiptail --gauge "Moving Files" 6 60 0
+#
+
+#Finishing Up Progress
+{
+    for ((i = 0 ; i <= 100 ; i+=20)); do
+        sleep 1
+        echo $i
+    done
+#
+
+sudo apt-get clean
+
+#
+}| whiptail --gauge "Finishing Up" 6 60 0
 #
 
 #Reboot Kangadesk Mate
