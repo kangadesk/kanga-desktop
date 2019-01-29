@@ -29,6 +29,7 @@ sudo apt-get install -y python3-gpiozero
 cd /opt/
 sudo mkdir kangadesk
 cd /opt/kangadesk
+wget -O "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/720677.jpg"
 script=shutdown.py
 
 if [ -e $script ];
@@ -65,7 +66,6 @@ fi
 #
 
 #
-wget -O /opt/kangadesk/ "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/720677.jpg"
 pcmanfm --set-wallpaper="/opt/kangadesk/720677.jpg"
 sudo cp /opt/kangadesk/720677.jpg /usr/share/plymouth/themes/pix/splash.png
 #
