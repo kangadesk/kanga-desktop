@@ -1,13 +1,13 @@
 #!/bin/bash
 
-#Run Root
+#Run As Root
 if [[ $EUID -ne 0 ]]; then
    echo "Please run as root." 
    exit 1
 fi
 #
 
-#Update Repo
+#Update Repository
 sudo apt-get update -y
 #
 
@@ -15,7 +15,7 @@ sudo apt-get update -y
 sudo apt-get install -y python3-gpiozero
 #
 
-#Download Python Script
+#Install SafePowerOff Script
 cd /opt/
 sudo mkdir kangadesk
 cd /opt/kangadesk
@@ -29,7 +29,7 @@ if [ -e $script ];
 fi
 #
 
-#Auto Run
+#Enable SafePowerOff AutoRun
 cd /etc/
 RC=rc.local
 
@@ -42,7 +42,7 @@ if grep -q "sudo python3 \/opt\/kangadesk\/shutdown.py \&" "$RC";
 fi
 #
 
-#Additional Steps
+#Custom Screen Settings
 cd /home/pi/
 sudo mkdir kangadesk
 cd /home/pi/kangadesk
@@ -50,10 +50,27 @@ curl -O -O https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/REA
 
 pcmanfm --set-wallpaper /home/pi/kangadesk/720677.jpg
 sudo cp /home/pi/kangadesk/720677.jpg /usr/share/plymouth/themes/pix/splash.png
+
+cd /boot/
+File=config.txt
+if grep -q "disable_splash=1" "$File";
+	then
+		echo "Rainbow Screen Already Disabled. Doing nothing."
+	else
+		echo "disable_splash=1" >> $File
+		echo "Rainbow Screen disabled."
+fi
 #
 
-#Reboot
-echo "Kangadesk Mate Addons Installed Successfully. Enjoy! System will now reboot in 5 seconds."
+#Reboot Kangadesk Mate
+echo "Kangadesk Mate Addons Installed Successfully. For More Info, Please Visit www.kangadesk.com"
+echo "Your System will now reboot in 5 seconds."
 sleep 5
+echo "5"
+echo "4"
+echo "3"
+echo "2"
+echo "1"
+echo "GoodBye"
 sudo reboot
 #
