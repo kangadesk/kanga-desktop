@@ -77,10 +77,20 @@ fi
 #
 
 #
-cd /usr/share/rpd-wallpaper/
+cd /usr/share/
+directory="/usr/share/rpd-wallpaper"
+
+if [ -d "$directory" ]; 
+	then
+                sudo rm -r rpd-wallpaper
+	else
+		echo "Directory doesn't exist. Please create it."
+fi
+
+sudo mkdir rpd-wallpaper
+cd /usr/share/rpd-wallpaper
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/wallpaper.jpg"
-mv wallpaper.jpg road.jpg
-sudo cp /usr/share/rpd-wallpaper/road.jpg /usr/share/plymouth/themes/pix/splash.png
+sudo cp /usr/share/rpd-wallpaper/wallpaper.jpg /usr/share/plymouth/themes/pix/splash.png
 #
 
 #
