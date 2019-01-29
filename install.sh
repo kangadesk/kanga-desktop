@@ -63,7 +63,7 @@ if grep -q "sudo python3 \/opt\/kangadesk\/shutdown.py \&" "$RC";
 fi
 #
 
-| dialog --gauge "Please wait" 6 60 0
+| whiptail --gauge "bam" 6 60 0
 
 #Custom Screen Settings
 cd /boot/
