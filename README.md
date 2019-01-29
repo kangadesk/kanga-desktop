@@ -1,4 +1,4 @@
-# Kangadesk Mate Addons
+# Kangadesk Mate Setup
 Installation Guide
 
 wget -O - "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/install.sh" | sudo bash
