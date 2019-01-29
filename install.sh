@@ -46,8 +46,8 @@ fi
 cd /home/
 sudo mkdir kangadesk
 cd /home/kangadesk
-wget  "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/README.md"
-wget  "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/720677.jpg"
+wget /home/kangadesk/ "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/README.md"
+wget /home/kangadesk/ "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/720677.jpg"
 pcmanfm --set-wallpaper /home/kangadesk/720677.jpg
 sudo cp /home/kangadesk/720677.jpg /usr/share/plymouth/themes/pix/splash.png
 #
