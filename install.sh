@@ -47,6 +47,8 @@ cd /home/
 sudo mkdir kangadesk
 cd /home/kangadesk
 wget  "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/README.md"
+wget  "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/720677.jpg"
+pcmanfm --set-wallpaper /home/kangadesk/720677.jpg
 #
 
 #Reboot
