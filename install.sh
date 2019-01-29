@@ -25,9 +25,18 @@ sudo apt-get update -y
 sudo apt-get install -y python3-gpiozero
 #
 
-#Install SafePowerOff Script
+#Create Directory
 cd /opt/
-sudo rm -r kangadesk; mkdir kangadesk
+directory="/opt/kangadesk"
+
+if [ -d "$directory" ]; 
+	then
+                echo "Directory already exists. Doing nothing."
+	else
+		sudo mkdir kangadesk
+fi
+
+#Install SafePowerOff Script
 cd /opt/kangadesk
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/720677.jpg"
 script=shutdown.py
