@@ -7,6 +7,8 @@ if [[ $EUID -ne 0 ]]; then
 fi
 #
 
+whiptail --title "Kangadesk Setup" --msgbox "Click OK to install the necessary packages for your Kangadesk Mate." 10 60
+
 {
     for ((i = 0 ; i <= 100 ; i+=20)); do
         sleep 1
