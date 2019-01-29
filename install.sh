@@ -43,6 +43,7 @@ fi
 cd /opt/kangadesk
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/720677.jpg"
 sudo cp /opt/kangadesk/720677.jpg /usr/share/plymouth/themes/pix/splash.png
+gsettings set org.gnome.desktop.background picture-uri file:/usr/share/plymouth/themes/pix/splash.png
 script=shutdown.py
 
 if [ -e $script ];
