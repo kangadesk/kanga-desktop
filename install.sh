@@ -63,14 +63,9 @@ fi
 #
 
 #Reboot Kangadesk Mate
+notify-send 'Rebooting...' 'Addons Installed Successfully'
 echo "Kangadesk Mate Addons Installed Successfully. For More Info, Please Visit www.kangadesk.com"
 echo "Your System will now reboot in 5 seconds."
 sleep 5
-echo "5"
-echo "4"
-echo "3"
-echo "2"
-echo "1"
-echo "GoodBye"
 sudo reboot
 #
