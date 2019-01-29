@@ -11,12 +11,14 @@ fi
 whiptail --title "Kangadesk Setup" --msgbox "Click OK to install the necessary addon packages for your Kangadesk Mate." 10 60
 #
 
+#
 {
     for ((i = 0 ; i <= 100 ; i+=10)); do
         sleep 1
         echo $i
     done
-        
+#
+
 #Update Repository
 sudo apt-get update -y
 #
@@ -35,6 +37,7 @@ if [ -d "$directory" ];
 	else
 		sudo mkdir kangadesk
 fi
+#
 
 #Install SafePowerOff Script
 cd /opt/kangadesk
@@ -63,8 +66,6 @@ if grep -q "sudo python3 \/opt\/kangadesk\/shutdown.py \&" "$RC";
 fi
 #
 
-| whiptail --gauge "bam" 6 60 0
-
 #Custom Screen Settings
 cd /boot/
 File=config.txt
@@ -77,7 +78,9 @@ if grep -q "disable_splash=1" "$File";
 fi
 #
 
+#
 }| whiptail --gauge "Installing Necessary Addons" 6 60 0
+#
 
 #Reboot Kangadesk Mate
 whiptail --title "Setup Complete" --msgbox "Addons Installed Successfully. For More Info, Please Visit www.kangadesk.com. Click OK To Reboot" 10 60
