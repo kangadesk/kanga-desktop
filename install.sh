@@ -50,11 +50,6 @@ fi
 #
 
 #Custom Screen Settings
-cd /home/pi/
-sudo mkdir kangadesk
-cd /home/pi/kangadesk
-curl -O -O https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/README.md https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/720677.jpg
-
 cd /boot/
 File=config.txt
 if grep -q "disable_splash=1" "$File";
