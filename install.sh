@@ -36,7 +36,7 @@ if [ -e $script ];
 	then
 		echo "Shutdown Script already exists. Doing nothing."
 	else
-		wget "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/shutdown.py"
+		wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/shutdown.py"
 fi
 #
 
