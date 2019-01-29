@@ -7,14 +7,15 @@ if [[ $EUID -ne 0 ]]; then
 fi
 #
 
-whiptail --title "Kangadesk Setup" --msgbox "Click OK to install the necessary packages for your Kangadesk Mate." 10 60
+#Welcome Message
+whiptail --title "Kangadesk Setup" --msgbox "Click OK to install the necessary addon package for your Kangadesk Mate." 10 60
 
 {
-    for ((i = 0 ; i <= 100 ; i+=20)); do
+    for ((i = 0 ; i <= 100 ; i+=10)); do
         sleep 1
         echo $i
     done
-
+#
 
 #Update Repository
 sudo apt-get update -y
@@ -67,7 +68,7 @@ fi
 
 #Reboot Kangadesk Mate
 whiptail --title "Setup Complete" --msgbox "Addons Installed Successfully. For More Info, Please Visit www.kangadesk.com. Click OK To Reboot" 10 60
-echo "Your System will now reboot in 5 seconds."
-sleep 5
+echo "Your System will now reboot in 4 seconds."
+sleep 4
 sudo reboot
 #
