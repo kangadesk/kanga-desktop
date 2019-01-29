@@ -115,7 +115,7 @@ sudo cp /usr/share/rpd-wallpaper/road.jpg /usr/share/plymouth/themes/pix/splash.
 #
 
 #
-}| whiptail --gauge "Installing Necessary Addons" 6 60 0
+}| whiptail --gauge "Moving Files" 6 60 0
 #
 
 #Reboot Kangadesk Mate
