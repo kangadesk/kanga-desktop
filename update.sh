@@ -28,7 +28,7 @@ sudo apt-get -y update
 
 #System Package Progress
 {
-    for ((i = 0 ; i <= 100 ; i+=1)); do
+    for ((i = 0 ; i <= 100 ; i+=3)); do
         sleep 1
         echo $i
     done
@@ -125,7 +125,7 @@ fi
 sudo mkdir rpd-wallpaper
 cd /usr/share/rpd-wallpaper
 #wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/road.jpg"
-wget -r -q https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper
+wget -r -q https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/
 #mv wallpaper.jpg road.jpg
 sudo cp /usr/share/rpd-wallpaper/road.jpg /usr/share/plymouth/themes/pix/splash.png
 #
