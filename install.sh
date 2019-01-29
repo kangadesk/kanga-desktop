@@ -18,7 +18,6 @@ whiptail --title "Kangadesk Setup" --msgbox "Click OK to install the necessary a
     done
     
 }
-echo "10" | dialog --gauge "a" height width percent
 
 #Update Repository
 sudo apt-get update -y
