@@ -52,6 +52,10 @@ pcmanfm --set-wallpaper /home/pi/kangadesk/720677.jpg
 sudo cp /home/pi/kangadesk/720677.jpg /usr/share/plymouth/themes/pix/splash.png
 #
 
+#Install Updates
+sudo apt-get upgrade
+#
+
 #Reboot
 echo "Kangadesk Mate Addons Installed Successfully. Enjoy! System will now reboot in 7 seconds."
 sleep 7
