@@ -18,7 +18,7 @@ sudo apt-get install -y python3-gpiozero
 #Download Python Script
 cd /opt/
 sudo mkdir kangadesk
-cd /opt/kangadesk/
+cd /opt/kangadesk
 script=shutdown.py
 
 if [ -e $script ];
@@ -33,17 +33,16 @@ fi
 cd /etc/
 RC=rc.local
 
-if grep -q "sudo python3 \/opt\/kangadesk\/pi\/shutdown.py \&" "$RC";
+if grep -q "sudo python3 \/opt\/kangadesk\/shutdown.py \&" "$RC";
 	then
 		echo "File /etc/rc.local already configured. Doing nothing."
 	else
-		sed -i -e "s/^exit 0/sudo python3 \/opt\/kangadesk\/pi\/shutdown.py \&\n&/g" "$RC"
+		sed -i -e "s/^exit 0/sudo python3 \/opt\/kangadesk\/shutdown.py \&\n&/g" "$RC"
 		echo "File /etc/rc.local configured."
 fi
 #
 
 #Reboot
-wget "https://raw.githubusercontent.com/kangadesk/kanga-pi/master/README.md"
 echo "Kangadesk Pi Addons Install Complete. Enjoy! System will now reboot in 10 seconds."
 sleep 10
 sudo reboot
