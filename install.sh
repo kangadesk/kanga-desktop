@@ -11,33 +11,22 @@ fi
 whiptail --title "Kangadesk Setup" --msgbox "Click OK to install the necessary addon packages for your Kangadesk Mate." 10 60
 #
 
-
-echo percentage | dialog --gauge "text" height width percent
-
-
-
-
-
+{
+    for ((i = 0 ; i <= 100 ; i+=10)); do
+        sleep 1
+        echo $i
+    done
+    
+}
+echo "10" | dialog --gauge "a" height width percent
 
 #Update Repository
 sudo apt-get update -y
 #
 
-
-
-
-echo "10" | dialog --gauge "Please wait" 10 70 0
-
-
-
-
 #gpiozero Module Install
 sudo apt-get install -y python3-gpiozero
 #
-
-
-echo "50" | dialog --gauge "Please wait" 10 70 0
-
 
 #Create Directory
 cd /opt/
@@ -77,10 +66,6 @@ if grep -q "sudo python3 \/opt\/kangadesk\/shutdown.py \&" "$RC";
 fi
 #
 
-
-echo "100" | dialog --gauge "Please wait" 10 70 0
-
-
 #Custom Screen Settings
 cd /boot/
 File=config.txt
@@ -93,11 +78,7 @@ if grep -q "disable_splash=1" "$File";
 fi
 #
 
-
-
-for i in $(seq 0 10 100) ; do sleep 1; echo $i | dialog --gauge "Please wait" 10 70 0; done
-
-
+| whiptail --gauge "Installing Necessary Addons" 6 60 0
 
 #Reboot Kangadesk Mate
 whiptail --title "Setup Complete" --msgbox "Addons Installed Successfully. For More Info, Please Visit www.kangadesk.com. Click OK To Reboot" 10 60
