@@ -63,7 +63,7 @@ fi
 #
 
 #Reboot Kangadesk Mate
-whiptail --title "System Setup Complete" --msgbox "Kangadesk Mate Addons Installed Successfully. For More Info, Please Visit www.kangadesk.com. Click OK To Reboot" 10 60
+whiptail --title "Setup Complete" --msgbox "Addons Installed Successfully. For More Info, Please Visit www.kangadesk.com. Click OK To Reboot" 10 60
 echo "Your System will now reboot in 5 seconds."
 sleep 5
 sudo reboot
