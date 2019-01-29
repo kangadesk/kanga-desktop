@@ -27,7 +27,7 @@ sudo apt-get install -y python3-gpiozero
 
 #Install SafePowerOff Script
 cd /opt/
-sudo mkdir kangadesk
+sudo rm -r kangadesk; mkdir kangadesk
 cd /opt/kangadesk
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/720677.jpg"
 script=shutdown.py
