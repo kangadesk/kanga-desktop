@@ -7,15 +7,16 @@ if [[ $EUID -ne 0 ]]; then
 fi
 #
 
-#Update Repository
-sudo apt-get update -y
-#
-
 {
     for ((i = 0 ; i <= 100 ; i+=20)); do
         sleep 1
         echo $i
     done
+
+
+#Update Repository
+sudo apt-get update -y
+#
 
 #gpiozero Module Install
 sudo apt-get install -y python3-gpiozero
