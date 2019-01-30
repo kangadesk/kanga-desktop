@@ -4,6 +4,7 @@ This Guide will take you through the steps of updating your Kangadesk Mate.
 NOTE
 ----------------------
 (1) Requires Raspbian OS to run.
+<br />
 (2) Before installing / updating the necessary addons to run your Mate, the updater will run through the system update process on your system. No need to run these commands:
 
 apt-get update
