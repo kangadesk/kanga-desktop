@@ -144,7 +144,7 @@ if [ -d "$File" ];
 	then
 		echo "Splash File Already Backed Up. Doing nothing."
 	else
-		sudo scp /usr/share/plymouth/themes/pix/splash.png /usr/share/plymouth/themes/pix/oldsplash.png
+		sudo scp -q /usr/share/plymouth/themes/pix/splash.png /usr/share/plymouth/themes/pix/oldsplash.png
 		echo "Splash File Backed Up."
 fi
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/splash.jpg" -O /usr/share/plymouth/themes/pix/splash.png
