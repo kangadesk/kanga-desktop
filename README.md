@@ -7,9 +7,9 @@ wget -O - "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/upd
 
 NOTE
 ----------------------
-(1) Requires Raspbian OS to run.
+1. Requires Raspbian OS to run.
 
-(2) Before installing / updating the necessary addons to run your Mate, the updater will run through the system update process on your system. No need to run these commands:
+2. Before installing / updating the necessary addons to run your Mate, the updater will run through the system update process on your system. No need to run these commands:
 
 apt-get update 
 <br />
