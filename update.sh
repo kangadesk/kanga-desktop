@@ -138,22 +138,13 @@ wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-w
 #mv wallpaper.jpg road.jpg
 
 #
-cd /opt/kangadesk
-directory="/opt/kangadesk/backup"
-
-if [ -d "$directory" ]; 
-	then
-                echo "Directory already exists. Doing Nothing."
-	else
-		mkdir backup
-fi
-cd /opt/kangadesk/backup
+cd /usr/share/plymouth/themes/pix
 File=oldsplash.png
 if [ -d "$File" ];
 	then
 		echo "Splash File Already Backed Up. Doing nothing."
 	else
-		sudo cp /usr/share/plymouth/themes/pix/splash.png /opt/kangadesk/backup/oldsplash.png
+		sudo scp /usr/share/plymouth/themes/pix/splash.png /usr/share/plymouth/themes/pix/oldsplash.png
 		echo "Splash File Backed Up."
 fi
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/splash.jpg" -O /usr/share/plymouth/themes/pix/splash.png
