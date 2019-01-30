@@ -93,7 +93,7 @@ fi
 
 #Moving Files Progress
 {
-    for ((i = 0 ; i <= 100 ; i+=10)); do
+    for ((i = 0 ; i <= 100 ; i+=8)); do
         sleep 1
         echo $i
     done
