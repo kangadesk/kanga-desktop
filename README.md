@@ -1,21 +1,14 @@
 # Kangadesk Mate Setup
 This Guide will take you through the steps of updating your Kangadesk Mate.
 
-To get started with the updater, please run this command inside of the terminal window.
+To get started with the updater, please run the install script below inside of a terminal window.
 
 wget -O - "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/update.sh" | sudo bash
 
 NOTE
 ----------------------
-1. Requires Raspbian OS to run.
+1. Make sure your Mate is connected to a reliable internet connection before running the updater.
 
-2. Before installing / updating the necessary addons to run your Mate, the updater will run through the system update process on your system. No need to run these commands:
+1. Kangadesk Mate requires the latest Raspbian OS to run.
 
-apt-get update 
-<br />
-apt-get upgrade 
-<br />
-apt-get dist-upgrade
-
-
-
+2. Before installing the necessary addons to run your Mate, the updater will run through the system update process on your system. No need to run these commands: apt-get update, apt-get upgrade, apt-get dist-upgrade
