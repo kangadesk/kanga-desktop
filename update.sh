@@ -72,7 +72,7 @@ if [ -e $script ];
 	then
 		echo "Shutdown Script already exists. Doing nothing."
 	else
-		wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/shutdown.py"
+		wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/opt/kangadesk/shutdown.py"
 fi
 #
 
