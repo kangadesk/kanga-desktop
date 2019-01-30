@@ -1,3 +1,4 @@
+Updated: 2019.1.30
 # Kangadesk Mate Setup
 
 This Guide will take you through the steps of updating your Kangadesk Mate.
