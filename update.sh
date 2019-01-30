@@ -145,6 +145,7 @@ if [ -d "$File" ];
 		echo "Splash File Already Exsists. Please Back Up."
 	else
 		wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/splash.jpg"
+		mv splash.jpg splash.png
 		echo "Splash File Saved. Enjoy!"
 fi
 
