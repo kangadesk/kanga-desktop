@@ -139,6 +139,16 @@ wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-w
 
 #
 cd /usr/share/plymouth/themes/pix
+File=splash.png
+if [ -d "$File" ];
+	then
+		echo "Splash File Already Exsists. Please Back Up."
+	else
+		wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/splash.jpg"
+		echo "Splash File Saved. Enjoy!"
+fi
+
+cd /usr/share/plymouth/themes/pix
 File=oldsplash.png
 if [ -d "$File" ];
 	then
