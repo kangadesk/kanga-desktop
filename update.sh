@@ -93,7 +93,7 @@ fi
 
 #Moving Files Progress
 {
-    for ((i = 0 ; i <= 100 ; i+=20)); do
+    for ((i = 0 ; i <= 100 ; i+=10)); do
         sleep 1
         echo $i
     done
@@ -136,7 +136,7 @@ wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-w
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/sand.jpg"
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/waterfall.jpg"
 #mv wallpaper.jpg road.jpg
-feh --bg-fill /usr/share/rpd-wallpaper/sand.jpg
+
 sudo cp /usr/share/rpd-wallpaper/road.jpg /usr/share/plymouth/themes/pix/splash.png
 #
 
