@@ -152,6 +152,8 @@ sudo cp /usr/share/rpd-wallpaper/road.jpg /usr/share/plymouth/themes/pix/splash.
     done
 #
 
+wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/README.md" -O /opt/kangadesk/README.md
+
 sudo apt-get clean
 
 #
