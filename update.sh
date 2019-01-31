@@ -92,9 +92,7 @@ fi
         sleep 1
         echo $i
     done
-#
 
-#Custom Screen Settings
 cd /boot/
 File=config.txt
 if grep -q "disable_splash=1" "$File";
@@ -104,9 +102,7 @@ if grep -q "disable_splash=1" "$File";
 		echo "disable_splash=1" >> $File
 		echo "Rainbow Screen disabled."
 fi
-#
 
-#Wallpaper Setup Files
 cd /usr/share/
 directory="/usr/share/rpd-wallpaper"
 
@@ -130,13 +126,11 @@ wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-w
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/road.jpg"
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/sand.jpg"
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/waterfall.jpg"
-
-#
 cd /usr/share/plymouth/themes/pix
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/splash.png" -O /usr/share/plymouth/themes/pix/splash.png
-#
 
 }| whiptail --gauge "Moving Files" 6 60 0
+#
 
 #Finishing Up
 {
@@ -144,13 +138,13 @@ wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/splas
         sleep 1
         echo $i
     done
-#
 
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/README.md" -O /opt/kangadesk/README.md
 
 sudo apt-get clean
 
 }| whiptail --gauge "Finishing Up" 6 60 0
+#
 
 #Reboot Kangadesk Mate
 whiptail --title "Setup Complete" --msgbox "Addons Installed Successfully. For More Info, Please Visit www.kangadesk.com. Click OK To Reboot" 10 60
