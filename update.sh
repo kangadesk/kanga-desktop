@@ -2,10 +2,13 @@
 
 #Run As Root
 if [[ $EUID -ne 0 ]]; then
-   echo "Please run as root." 
+   echo "Please run updater as root." 
    exit 1
 fi
 #
+
+echo "Your system will now download the necessary updates and install them. Please wait for the installer to finish..."
+sleep 3
 
 #Fetch Updates
 sudo apt-get -y update
@@ -18,6 +21,8 @@ sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade
 #gpiozero Module Install
 sudo apt-get install -y python3-gpiozero
 #
+
+sleep 4
 
 #Welcome Message
 whiptail --title "Kangadesk Setup" --msgbox "Click OK to update the necessary addon packages for your Kangadesk Mate." 10 60
