@@ -140,23 +140,13 @@ wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-w
 #
 cd /usr/share/plymouth/themes/pix
 
-File=oldsplash.png
+File=bsplash.png
 if [ -d "$File" ];
 	then
 		echo "Splash File Already Backed Up. Doing nothing."
 	else
-		sudo cp /usr/share/plymouth/themes/pix/splash.png /usr/share/plymouth/themes/pix/oldsplash.png
+		sudo cp /usr/share/plymouth/themes/pix/splash.png /usr/share/plymouth/themes/pix/bsplash.png
 		echo "Splash File Backed Up."
-fi
-
-File=splash.png
-if [ -d "$File" ];
-	then
-		echo "Splash File Already Exsists. Please Back Up."
-	else
-		wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/splash.jpg"
-		sudo mv splash.jpg splash.png
-		echo "Splash File Saved. Enjoy!"
 fi
 
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/splash.jpg" -O /usr/share/plymouth/themes/pix/splash.png
