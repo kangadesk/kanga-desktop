@@ -7,7 +7,7 @@ if [[ $EUID -ne 0 ]]; then
 fi
 #
 
-echo "Your system will now download the necessary updates and install them. Please wait for the installer to finish..."
+echo "Please wait for the updater to finish installing updates..."
 sleep 3
 
 #Fetch Updates
@@ -15,7 +15,8 @@ sudo apt-get -y update
 #
 
 #Update Repository
-sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade
+sudo apt-get -y upgrade
+sudo apt-get -y dist-upgrade
 #
 
 #gpiozero Module Install
@@ -24,11 +25,9 @@ sudo apt-get install -y python3-gpiozero
 
 sleep 4
 
-#Welcome Message
 whiptail --title "Kangadesk Setup" --msgbox "Click OK to update the necessary addon packages for your Kangadesk Mate." 10 60
-#
 
-#Update Firmware Progress
+#Update Firmware
 {
     for ((i = 0 ; i <= 100 ; i+=20)); do
         sleep 1
@@ -36,7 +35,19 @@ whiptail --title "Kangadesk Setup" --msgbox "Click OK to update the necessary ad
     done
 #
 
-#Create Directory
+#Enable UART
+cd /boot/
+File=config.txt
+if grep -q "enable_uart=1" "$File";
+	then
+		echo "UART already enabled. Doing nothing."
+	else
+		echo "enable_uart=1" >> $File
+		echo "UART enabled."
+fi
+#
+
+#Create Kangadesk Directory
 cd /opt/
 directory="/opt/kangadesk"
 
@@ -75,7 +86,7 @@ fi
 
 }| whiptail --gauge "Updating Firmware" 6 60 0
 
-#Moving Files Progress
+#Moving Files
 {
     for ((i = 0 ; i <= 100 ; i+=8)); do
         sleep 1
@@ -119,18 +130,15 @@ wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-w
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/road.jpg"
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/sand.jpg"
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/waterfall.jpg"
-#mv wallpaper.jpg road.jpg
 
 #
 cd /usr/share/plymouth/themes/pix
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/splash.png" -O /usr/share/plymouth/themes/pix/splash.png
 #
 
-#
 }| whiptail --gauge "Moving Files" 6 60 0
-#
 
-#Finishing Up Progress
+#Finishing Up
 {
     for ((i = 0 ; i <= 100 ; i+=20)); do
         sleep 1
@@ -142,13 +150,9 @@ wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/READM
 
 sudo apt-get clean
 
-#
 }| whiptail --gauge "Finishing Up" 6 60 0
-#
 
 #Reboot Kangadesk Mate
 whiptail --title "Setup Complete" --msgbox "Addons Installed Successfully. For More Info, Please Visit www.kangadesk.com. Click OK To Reboot" 10 60
-#echo "Your System will now reboot in 4 seconds."
-#sleep 4
 sudo reboot
 #
