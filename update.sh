@@ -190,7 +190,21 @@ wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-w
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/sand.jpg"
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/waterfall.jpg"
 
-wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/splash.png" -O /usr/share/plymouth/themes/pix/splash.png
+
+#Change Plymouth Splash .png Location
+cd /usr/share/plymouth/themes/pix/
+PP=pix.plymouth
+
+ImageDir=/usr/share/plymouth/themes/pix/
+
+if grep -q "ImageDir=/usr/share/plymouth/themes/pix/" "$PP";
+	then
+		sed "s#ImageDir=/usr/share/plymouth/themes/pix/#ImageDir=/opt/kangadesk/#g" "$PP"
+	else
+		echo "Doing Nothing"
+fi
+#
+
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/README.md" -O /opt/kangadesk/README.md
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/opt/kangadesk/splash.png" -O /opt/kangadesk/splash.png
 
