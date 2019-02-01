@@ -177,7 +177,7 @@ wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-w
 
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/splash.png" -O /usr/share/plymouth/themes/pix/splash.png
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/README.md" -O /opt/kangadesk/README.md
-wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/opt/kangadesk/splash.jpg" -O /opt/kangadesk/splash.jpg
+wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/opt/kangadesk/splash.png" -O /opt/kangadesk/splash.png
 
 }| whiptail --gauge "Moving Files" 6 60 0
 #
