@@ -127,8 +127,16 @@ if grep -q "consoleblank=0 loglevel=1 quiet" "$File";
 fi
 
 #Enable Custom Boot Splash
-wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/etc/systemd/system/splashscreen.service" -O /etc/systemd/system/splashscreen.service
-echo "splashscreen.service created."
+cd /etc/systemd/system/
+File="splashscreen.service"
+
+if [ -d "$File" ]; 
+	then
+                echo "File already exists. Doing nothing."
+	else
+		wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/etc/systemd/system/splashscreen.service"
+		echo "splashscreen.service created."
+fi
 #
 
 cd /usr/share/
@@ -155,8 +163,9 @@ wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-w
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/sand.jpg"
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/waterfall.jpg"
 
-cd /usr/share/plymouth/themes/pix
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/splash.png" -O /usr/share/plymouth/themes/pix/splash.png
+wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/README.md" -O /opt/kangadesk/README.md
+wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/opt/kangadesk/splash.png" -O /opt/kangadesk/splash.png
 
 }| whiptail --gauge "Moving Files" 6 60 0
 #
@@ -167,9 +176,6 @@ wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/splas
         sleep 1
         echo $i
     done
-
-wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/README.md" -O /opt/kangadesk/README.md
-wget -q "https://github.com/kangadesk/kangadesk-mate/blob/master/opt/splash.png" -O /opt/splash.png
 
 }| whiptail --gauge "Finishing Up" 6 60 0
 #
