@@ -127,18 +127,9 @@ if grep -q "consoleblank=0 loglevel=1 quiet" "$File";
 fi
 
 #Enable Custom Boot Splash
-cd /etc/systemd/system/
-File=splashscreen.service
-if [ -d "$File" ];
-	then
-		echo "splashscreen.service already exists. Doing nothing."
-	else
-		wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/etc/systemd/system/splashscreen.service"
-		echo "splashscreen.service created."
-fi
+wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/etc/systemd/system/splashscreen.service" -O /etc/systemd/system/splashscreen.service
+echo "splashscreen.service created."
 #
-
-sudo systemctl enable splashscreen
 
 cd /usr/share/
 directory="/usr/share/rpd-wallpaper"
@@ -180,12 +171,15 @@ wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/splas
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/README.md" -O /opt/kangadesk/README.md
 wget -q "https://github.com/kangadesk/kangadesk-mate/blob/master/opt/splash.png" -O /opt/splash.png
 
-sudo apt-get clean
-
 }| whiptail --gauge "Finishing Up" 6 60 0
 #
 
 #Reboot Kangadesk Mate
 whiptail --title "Setup Complete" --msgbox "Addons Installed Successfully. For More Info, Please Visit www.kangadesk.com. Click OK To Reboot" 10 60
+sudo systemctl enable boot-splashscreen.service
+sudo systemctl start boot-splashscreen.service
+sudo apt-get clean
+echo "Your system will now reboot in 4 seconds."
+sleep 4
 sudo reboot
 #
