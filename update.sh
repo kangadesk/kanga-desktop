@@ -164,8 +164,8 @@ wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-w
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/sand.jpg"
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/waterfall.jpg"
 
-#cd /usr/share/plymouth/themes/pix
-#wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/splash.png" -O /usr/share/plymouth/themes/pix/splash.png
+cd /usr/share/plymouth/themes/pix
+wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/splash.png" -O /usr/share/plymouth/themes/pix/splash.png
 
 }| whiptail --gauge "Moving Files" 6 60 0
 #
@@ -178,7 +178,7 @@ wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-w
     done
 
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/README.md" -O /opt/kangadesk/README.md
-wget -q "https://github.com/kangadesk/kangadesk-mate/blob/master/opt/kangadesk/splash.png" -O /opt/kangadesk/splash.png
+wget -q "https://github.com/kangadesk/kangadesk-mate/blob/master/opt/splash.png" -O /opt/splash.png
 
 sudo apt-get clean
 
