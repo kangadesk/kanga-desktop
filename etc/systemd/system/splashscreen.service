@@ -1,10 +1,10 @@
 [Unit]
-Description=boot splash screen
+Description=Splash screen
 DefaultDependencies=no
 After=local-fs.target
 
 [Service]
-ExecStart=/usr/bin/python3 /opt/kangadesk/framebuffer.py -img /opt/kangadesk/splash.jpg
+ExecStart=/usr/bin/fbi -d /dev/fb0 --noverbose -a /opt/kangadesk/splash.jpg
 StandardInput=tty
 StandardOutput=tty
 
