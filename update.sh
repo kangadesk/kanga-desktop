@@ -103,6 +103,24 @@ if grep -q "disable_splash=1" "$File";
 		echo "Rainbow Screen disabled."
 fi
 
+File=cmdline.txt
+if grep -q "logo.nologo" "$File";
+	then
+		echo "Raspberry Pi logo Already Disabled. Doing nothing."
+	else
+		echo "logo.nologo" >> $File
+		echo "Raspberry Pi logo Disabled."
+fi
+
+File=cmdline.txt
+if grep -q "consoleblank=0 loglevel=1 quiet" "$File";
+	then
+		echo "Kernal Outputs Already Disabled. Doing nothing."
+	else
+		echo "consoleblank=0 loglevel=1 quiet" >> $File
+		echo "Kernal Outputs Disabled."
+fi
+
 cd /usr/share/
 directory="/usr/share/rpd-wallpaper"
 
