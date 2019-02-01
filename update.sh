@@ -76,18 +76,6 @@ if [ -e $script ];
 fi
 #
 
-#Install FrameBuffer Script
-cd /opt/kangadesk
-script=framebuffer.py
-
-if [ -e $script ];
-	then
-		echo "Framebuffer Script already exists. Doing nothing."
-	else
-		wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/opt/kangadesk/framebuffer.py"
-fi
-#
-
 #Enable SafePowerOff AutoRun
 cd /etc/
 RC=rc.local
@@ -149,14 +137,14 @@ fi
 
 #Enable Custom Boot Splash
 cd /etc/systemd/system/
-File="splashscreen.service"
+File="splash.service"
 
 if [ -d "$File" ]; 
 	then
                 echo "File already exists. Doing nothing."
 	else
-		wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/etc/systemd/system/splashscreen.service"
-		echo "splashscreen.service created."
+		wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/etc/systemd/system/splash.service"
+		echo "splash.service created."
 fi
 #
 
@@ -186,7 +174,7 @@ wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-w
 
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/splash.png" -O /usr/share/plymouth/themes/pix/splash.png
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/README.md" -O /opt/kangadesk/README.md
-wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/opt/kangadesk/splash.png" -O /opt/kangadesk/splash.png
+wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/opt/kangadesk/splash.mp4" -O /opt/kangadesk/splash.mp4
 
 }| whiptail --gauge "Moving Files" 6 60 0
 #
