@@ -120,6 +120,15 @@ if grep -q "disable_splash=1" "$File";
 		echo "Rainbow Screen disabled."
 fi
 
+File=config.txt
+if grep -q "disable_overscan=1" "$File";
+	then
+		echo "Rainbow Screen Already Disabled. Doing nothing."
+	else
+		echo "disable_overscan=1" >> $File
+		echo "Rainbow Screen disabled."
+fi
+
 File=cmdline.txt
 if grep -q "logo.nologo" "$File";
 	then
