@@ -199,7 +199,7 @@ ImageDir=/usr/share/plymouth/themes/pix/
 
 if grep -q "ImageDir=/usr/share/plymouth/themes/pix/" "$PP";
 	then
-		sed "s#ImageDir=/usr/share/plymouth/themes/pix/#ImageDir=/opt/kangadesk/#g" "$PP"
+		sed -i -e "s/ImageDir=\/usr\/share\/plymouth\/themes\/pix\//ImageDir=\/opt\/kangadesk\//g" "$PP"
 	else
 		echo "Doing Nothing"
 fi
