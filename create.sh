@@ -1,4 +1,2 @@
 #!/bin/bash
-cd ~/Desktop
-touch cat.txt
-echo "test" >> cat.txt
+sudo wget -O - "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/update.sh" | sudo bash
