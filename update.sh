@@ -194,8 +194,8 @@ wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/opt/k
 
 #Reboot Kangadesk Mate
 whiptail --title "Setup Complete" --msgbox "Addons Installed Successfully. For more info and to stay up to date, Please Visit www.kangadesk.com/mate. Click OK To Reboot." 10 60
-sudo systemctl enable splashscreen
-sudo systemctl start splashscreen
+sudo systemctl enable splashscreen.service
+sudo systemctl start splashscreen.service
 sudo apt-get clean
 echo "Your system will now reboot in 5 seconds."
 sleep 5
