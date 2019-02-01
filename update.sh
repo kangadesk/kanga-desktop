@@ -155,14 +155,14 @@ fi
 
 #Enable Custom Boot Splash
 cd /etc/systemd/system/
-File="splash.service"
+File="boot.service"
 
 if [ -d "$File" ]; 
 	then
-                echo "File already exists. Doing nothing."
+                echo "Boot File already exists. Doing nothing."
 	else
-		wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/etc/systemd/system/splash.service"
-		echo "splash.service created."
+		wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/etc/systemd/system/boot.service"
+		echo "boot.service created."
 fi
 #
 
@@ -207,6 +207,7 @@ fi
 
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/README.md" -O /opt/kangadesk/README.md
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/opt/kangadesk/splash.png" -O /opt/kangadesk/splash.png
+wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/opt/kangadesk/boot.png" -O /opt/kangadesk/boot.png
 
 }| whiptail --gauge "Moving Files" 6 60 0
 #
@@ -223,8 +224,8 @@ wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/opt/k
 
 #Reboot Kangadesk Mate
 whiptail --title "Setup Complete" --msgbox "Addons Installed Successfully. For more info and to stay up to date, Please Visit www.kangadesk.com/mate. Click OK To Reboot." 10 60
-sudo systemctl enable splash.service
-sudo systemctl start splash.service
+sudo systemctl enable boot.service
+sudo systemctl start boot.service
 sudo apt-get clean
 echo "Your system will now reboot in 5 seconds."
 sleep 5
