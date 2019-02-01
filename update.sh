@@ -8,7 +8,7 @@ fi
 #
 
 echo "Please wait for the updater to finish installing updates..."
-sleep 3
+sleep 8
 
 #Fetch Updates
 sudo apt-get -y update
@@ -23,7 +23,12 @@ sudo apt-get -y dist-upgrade
 sudo apt-get install -y python3-gpiozero
 #
 
-sleep 4
+#fbi Install
+sudo apt-get install -y fbi
+#
+
+echo "Please wait for the updater to finish installing updates..."
+sleep 8
 
 whiptail --title "Kangadesk Setup" --msgbox "Click OK to update the necessary addon packages for your Kangadesk Mate." 10 60
 
@@ -158,8 +163,9 @@ wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-w
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/road.jpg"
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/sand.jpg"
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/waterfall.jpg"
-cd /usr/share/plymouth/themes/pix
-wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/splash.png" -O /usr/share/plymouth/themes/pix/splash.png
+
+#cd /usr/share/plymouth/themes/pix
+#wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/splash.png" -O /usr/share/plymouth/themes/pix/splash.png
 
 }| whiptail --gauge "Moving Files" 6 60 0
 #
@@ -172,6 +178,7 @@ wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/splas
     done
 
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/README.md" -O /opt/kangadesk/README.md
+wget -q "https://github.com/kangadesk/kangadesk-mate/blob/master/opt/kangadesk/splash.png" -O /opt/kangadesk/splash.png
 
 sudo apt-get clean
 
