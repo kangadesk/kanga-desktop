@@ -4,7 +4,7 @@ DefaultDependencies=no
 After=local-fs.target
 
 [Service]
-ExecStart=/usr/bin/fbi --noverbose -a /opt/kangadesk/splash.png
+ExecStart=/usr/bin/omxplayer -b /path/to/video.mp4
 StandardInput=tty
 StandardOutput=tty
 
