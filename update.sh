@@ -195,8 +195,6 @@ wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-w
 cd /usr/share/plymouth/themes/pix/
 PP=pix.plymouth
 
-ImageDir=/usr/share/plymouth/themes/pix/
-
 if grep -q "ImageDir=/usr/share/plymouth/themes/pix/" "$PP";
 	then
 		sed -i -e "s/ImageDir=\/usr\/share\/plymouth\/themes\/pix\//ImageDir=\/opt\/kangadesk\//g" "$PP"
