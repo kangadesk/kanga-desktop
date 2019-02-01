@@ -111,10 +111,10 @@ fi
 File=config.txt
 if grep -q "disable_overscan=1" "$File";
 	then
-		echo "Rainbow Screen Already Disabled. Doing nothing."
+		echo "Disable overscan set. Doing nothing."
 	else
 		echo "disable_overscan=1" >> $File
-		echo "Rainbow Screen disabled."
+		echo "Disable overscan set"
 fi
 
 File=cmdline.txt
@@ -127,11 +127,29 @@ if grep -q "logo.nologo" "$File";
 fi
 
 File=cmdline.txt
-if grep -q "consoleblank=0 loglevel=1 quiet" "$File";
+if grep -q "consoleblank=0" "$File";
 	then
 		echo "Kernal Outputs Already Disabled. Doing nothing."
 	else
-		echo "consoleblank=0 loglevel=1 quiet" >> $File
+		echo "consoleblank=0" >> $File
+		echo "Kernal Outputs Disabled."
+fi
+
+File=cmdline.txt
+if grep -q "loglevel=1" "$File";
+	then
+		echo "Kernal Outputs Already Disabled. Doing nothing."
+	else
+		echo "loglevel=1" >> $File
+		echo "Kernal Outputs Disabled."
+fi
+
+File=cmdline.txt
+if grep -q "quiet" "$File";
+	then
+		echo "Kernal Outputs Already Disabled. Doing nothing."
+	else
+		echo "quiet" >> $File
 		echo "Kernal Outputs Disabled."
 fi
 
@@ -174,7 +192,7 @@ wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-w
 
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/splash.png" -O /usr/share/plymouth/themes/pix/splash.png
 wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/README.md" -O /opt/kangadesk/README.md
-wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/opt/kangadesk/splash.mp4" -O /opt/kangadesk/splash.mp4
+wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/opt/kangadesk/splash.png" -O /opt/kangadesk/splash.png
 
 }| whiptail --gauge "Moving Files" 6 60 0
 #
