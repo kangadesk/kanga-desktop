@@ -76,6 +76,18 @@ if [ -e $script ];
 fi
 #
 
+#Install FrameBuffer Script
+cd /opt/kangadesk
+script=framebuffer.py
+
+if [ -e $script ];
+	then
+		echo "Framebuffer Script already exists. Doing nothing."
+	else
+		wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/opt/kangadesk/framebuffer.py"
+fi
+#
+
 #Enable SafePowerOff AutoRun
 cd /etc/
 RC=rc.local
