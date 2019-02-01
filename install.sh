@@ -1,4 +1,3 @@
 #!/bin/bash
-cd ~/Desktop
-touch cat.txt
-echo "test" >> cat.txt
+wget "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/create.sh" -O /pi/create.sh
+chmod +x create.sh
