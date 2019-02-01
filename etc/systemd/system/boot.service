@@ -1,10 +1,10 @@
 [Unit]
-Description=Splash screen
+Description=Boot screen
 DefaultDependencies=no
 After=local-fs.target
 
 [Service]
-ExecStart=/usr/bin/fbi -d /dev/fb0 --noverbose -a /opt/kangadesk/splash.png
+ExecStart=/usr/bin/fbi -d /dev/fb0 --noverbose -a /opt/kangadesk/boot.png
 StandardInput=tty
 StandardOutput=tty
 
