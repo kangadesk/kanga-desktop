@@ -121,6 +121,20 @@ if grep -q "consoleblank=0 loglevel=1 quiet" "$File";
 		echo "Kernal Outputs Disabled."
 fi
 
+#Enable Custom Boot Splash
+cd /etc/systemd/system/
+File=splashscreen.service
+if [ -d "$File" ];
+	then
+		echo "splashscreen.service already exists. Doing nothing."
+	else
+		wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/etc/systemd/system/splashscreen.service"
+		echo "splashscreen.service created."
+fi
+#
+
+sudo systemctl enable splashscreen
+
 cd /usr/share/
 directory="/usr/share/rpd-wallpaper"
 
