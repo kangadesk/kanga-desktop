@@ -217,11 +217,6 @@ wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/opt/k
         echo $i
     done
 
-cd /opt/kangadesk/
-wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/create.sh"
-sudo chmod +x create.sh
-
-
 }| whiptail --gauge "Finishing Up" 6 60 0
 #
 
