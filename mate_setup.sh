@@ -10,7 +10,6 @@ fi
 HEIGHT=15
 WIDTH=40
 CHOICE_HEIGHT=4
-BACKTITLE="Backtitle here"
 TITLE="Title here"
 MENU="Choose one of the following options:"
 
@@ -29,7 +28,7 @@ CHOICE=$(dialog --clear \
 clear
 case $CHOICE in
         1)
-            echo "You chose Option 1"
+            wget -O - "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/packages/install.sh" | sudo bash
             ;;
         2)
             echo "You chose Option 2"
