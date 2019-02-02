@@ -5,7 +5,7 @@ This Guide will take you through the steps of updating your Kangadesk Mate.
 
 To get started with the updater, please run the install script below inside of a terminal window.
 
-wget -O - "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/update.sh" | sudo bash
+wget -O - "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/mate_setup.sh" | sudo bash
 
 NOTE
 ----------------------
