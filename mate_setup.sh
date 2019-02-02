@@ -2,7 +2,7 @@
 
 #Run As Root
 if [[ $EUID -ne 0 ]]; then
-   echo "Please run updater as root." 
+   echo "Please run setup as root." 
    exit 1
 fi
 #
@@ -10,14 +10,14 @@ fi
 HEIGHT=15
 WIDTH=40
 CHOICE_HEIGHT=4
-TITLE="Title here"
+TITLE="Setup Wizard"
 MENU="Choose one of the following options:"
 
-OPTIONS=(1 "Install Mate Addon Packages"
-         2 "Upgrade Exsisitng Packages"
-         3 "Configure Your Mate")
+OPTIONS=(1 "Install Mate Add-on Packages"
+         2 "Check For Exsisting Updates"
+         3 "Configure Your Add-ons")
 
-CHOICE=$(dialog --clear \
+CHOICE=$(whiptail --clear \
                 --title "$TITLE" \
                 --menu "$MENU" \
                 $HEIGHT $WIDTH $CHOICE_HEIGHT \
