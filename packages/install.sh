@@ -72,7 +72,7 @@ if [ -e $script ];
 	then
 		echo "Shutdown Script already exists. Doing nothing."
 	else
-		wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/opt/kangadesk/shutdown.py"
+		wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/opt/kangadesk/shutdown.py"
 fi
 #
 
@@ -161,7 +161,7 @@ if [ -d "$File" ];
 	then
                 echo "Boot File already exists. Doing nothing."
 	else
-		wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/etc/systemd/system/boot.service"
+		wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/etc/systemd/system/boot.service"
 		echo "boot.service created."
 fi
 #
@@ -178,17 +178,17 @@ fi
 
 sudo mkdir rpd-wallpaper
 cd /usr/share/rpd-wallpaper
-wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/aurora.jpg"
-wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/balloon.jpg"
-wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/bridge.jpg"
-wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/canyon.jpg"
-wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/cliff.jpg"
-wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/clouds.jpg"
-wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/fisherman.jpg"
-wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/fjord.jpg"
-wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/road.jpg"
-wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/sand.jpg"
-wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/rpd-wallpaper/waterfall.jpg"
+wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/rpd-wallpaper/aurora.jpg"
+wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/rpd-wallpaper/balloon.jpg"
+wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/rpd-wallpaper/bridge.jpg"
+wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/rpd-wallpaper/canyon.jpg"
+wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/rpd-wallpaper/cliff.jpg"
+wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/rpd-wallpaper/clouds.jpg"
+wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/rpd-wallpaper/fisherman.jpg"
+wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/rpd-wallpaper/fjord.jpg"
+wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/rpd-wallpaper/road.jpg"
+wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/rpd-wallpaper/sand.jpg"
+wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/rpd-wallpaper/waterfall.jpg"
 
 
 #Change Plymouth Splash .png Location
@@ -203,9 +203,9 @@ if grep -q "ImageDir=/usr/share/plymouth/themes/pix" "$PP";
 fi
 #
 
-wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/README.md" -O /opt/kangadesk/README.md
-wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/opt/kangadesk/splash.png" -O /opt/kangadesk/splash.png
-wget -q "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/opt/kangadesk/boot.png" -O /opt/kangadesk/boot.png
+wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/README.md" -O /opt/kangadesk/README.md
+wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/opt/kangadesk/splash.png" -O /opt/kangadesk/splash.png
+wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/opt/kangadesk/boot.png" -O /opt/kangadesk/boot.png
 
 }| whiptail --gauge "Moving Files" 6 60 0
 #
