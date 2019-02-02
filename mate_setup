@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#Run As Root
+if [[ $EUID -ne 0 ]]; then
+   echo "Please run updater as root." 
+   exit 1
+fi
+#
+
+wget -O - "https://raw.githubusercontent.com/kangadesk/kangadesk-mate/master/packages/install.sh" | sudo bash
