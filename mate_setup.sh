@@ -14,8 +14,8 @@ TITLE="Mate Setup Wizard"
 MENU="Choose one of the following options:"
 
 OPTIONS=(1 "Install Mate Add-on Packages"
-         2 "Check For Exsisting Updates"
-         3 "Configure Your Add-ons"
+         2 "Check For Available Updates"
+         3 "Configure Mate Settings"
          4 "Configure Raspi Settings")
 
 CHOICE=$(whiptail --clear \
