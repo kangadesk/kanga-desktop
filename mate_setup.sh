@@ -13,12 +13,11 @@ CHOICE_HEIGHT=4
 TITLE="Title here"
 MENU="Choose one of the following options:"
 
-OPTIONS=(1 "Option 1"
+OPTIONS=(1 "Install Mate Addons"
          2 "Option 2"
          3 "Option 3")
 
 CHOICE=$(dialog --clear \
-                --backtitle "$BACKTITLE" \
                 --title "$TITLE" \
                 --menu "$MENU" \
                 $HEIGHT $WIDTH $CHOICE_HEIGHT \
