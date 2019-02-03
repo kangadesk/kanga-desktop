@@ -12,11 +12,10 @@ File=os-release
 if grep -q "Raspbian" "$File";
 	then
 		sleep 5
-    		whiptail --title "Mate Setup Wizard" --msgbox "System not supported. Click OK To return to main menu." 10 60
-    		wget -O - "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/mate_setup.sh" | sudo bash
 	else
 		sleep 5
-		echo "Checking system"
+    		whiptail --title "Mate Setup Wizard" --msgbox "System not supported. Click OK To return to main menu." 10 60
+    		wget -O - "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/mate_setup.sh" | sudo bash
 fi
 
 {
