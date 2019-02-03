@@ -15,17 +15,17 @@ if grep -q "bian" "$File";
 	else
 		sleep 5
     		whiptail --title "Mate Setup Wizard" --msgbox "System not supported. Click OK To return to main menu." 10 60
-    		wget -O - "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/mate_setup.sh" | sudo bash
+    		wget -O - "https://raw.githubusercontent.com/pilelu/mate-desktop/master/mate_setup.sh" | sudo bash
 fi
 
-cd /opt/kangadesk/
+cd /opt/mate/
 File="VERSION.md"
 if [ -d "$File" ]; 
 	then
               sleep 5
               whiptail --title "Mate Setup Wizard" --msgbox "Mate Desktop already installed. Click OK To return to main menu." 10 60
-	      wget -O - "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/mate_setup.sh" | sudo bash
+	      wget -O - "https://raw.githubusercontent.com/pilelu/mate-desktop/master/mate_setup.sh" | sudo bash
 	else
 	      sleep 5
-              wget -O - "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/packages/install.sh" | sudo bash
+              wget -O - "https://raw.githubusercontent.com/pilelu/mate-desktop/master/packages/install.sh" | sudo bash
 fi
