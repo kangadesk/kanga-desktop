@@ -244,14 +244,12 @@ fi
 #
 
 #Reboot Kangadesk Mate
-whiptail --title "Setup Complete" --msgbox "Addons Installed Successfully. For more info and to stay up to date, Please Visit www.kangadesk.com/mate. Click OK To Reboot." 10 60
+whiptail --title "Setup Complete" --msgbox "Mate Addons Installed Successfully. Please Reboot System For Changes To Take Effect" 10 60
 sudo systemctl enable boot.service
 sudo systemctl start boot.service
 sudo apt-get clean
-echo "Your system will now reboot in 5 seconds."
-sleep 5
-sudo reboot
 
+sleep 5
 wget -O - "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/packages/version-control.sh" | sudo bash
 
 #
