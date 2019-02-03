@@ -9,7 +9,7 @@ fi
 
 cd /etc/
 File=os-release
-if grep -q "Raspbian" "$File";
+if grep -q "bian" "$File";
 	then
 		sleep 5
 	else
