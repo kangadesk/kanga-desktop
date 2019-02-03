@@ -5,6 +5,7 @@ This Guide will take you through the steps of updating your Kangadesk Mate.
 
 To get started with the updater, please run the install script below inside of a terminal window.
 
+# version: 0.0.1
 wget -O - "https://raw.githubusercontent.com/pilelu/mate-desktop/master/mate_setup.sh" | sudo bash
 
 NOTE
@@ -14,5 +15,3 @@ NOTE
 1. Mate requires the latest Raspbian OS to run.
 
 2. Before installing the necessary addons to run your Mate, the updater will run through the system update process on your system. No need to run these commands: apt-get update, apt-get upgrade, apt-get dist-upgrade
-
-# version: 0.0.1
