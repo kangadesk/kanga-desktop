@@ -10,6 +10,8 @@ fi
 echo "Please wait for the updater to finish installing updates..."
 sleep 8
 
+sudo apt-get clean
+
 #Fetch Updates
 sudo apt-get -y update
 #
@@ -248,7 +250,6 @@ fi
 whiptail --title "Setup Complete" --msgbox "MateDesktop Installed Successfully. Please Reboot System For Changes To Take Effect" 10 60
 sudo systemctl enable boot.service
 sudo systemctl start boot.service
-sudo apt-get clean
 
 sleep 5
 wget -O - "https://raw.githubusercontent.com/pilelu/mate-desktop/master/mate_setup.sh" | sudo bash
