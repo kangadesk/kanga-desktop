@@ -250,6 +250,6 @@ sudo systemctl start boot.service
 sudo apt-get clean
 
 sleep 5
-wget -O - "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/packages/version-control.sh" | sudo bash
+wget -O - "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/mate_setup.sh" | sudo bash
 
 #
