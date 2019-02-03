@@ -28,7 +28,7 @@ CHOICE=$(whiptail --clear \
 clear
 case $CHOICE in
         1)
-            echo "You chose Option 1"
+            wget -O - "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/packages/version-control.sh" | sudo bash
             ;;
         2)
             echo "You chose Option 2"
