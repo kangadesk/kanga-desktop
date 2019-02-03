@@ -1,11 +1,12 @@
 Updated: 2019.1.30
 # mateDesktop Setup
 
-This Guide will take you through the steps of updating your Kangadesk Mate.
+This Guide will take you through the steps of installing & updating your mateDesktop.
 
 To get started with the installer, please run the line of code below inside of a terminal window.
 
 # version: 0.0.1
+Installation:
 wget -O - "https://raw.githubusercontent.com/pilelu/mate-desktop/master/mate_setup.sh" | sudo bash
 
 To update your mateDesktop, simply double click on setup.sh located within /opt/mate directory.
