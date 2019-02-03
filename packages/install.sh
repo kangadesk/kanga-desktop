@@ -220,11 +220,24 @@ wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/opt/kan
 cd /opt/kangadesk/
 VC=VERSION.md
 
+
+
+if [ -d "$VC" ]; 
+	then
+                echo "File already exists. Doing nothing."
+	else
+		wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/opt/kangadesk/VERSION.md"
+		echo "File created."
+fi
+
+
+
+
 if grep -q "V:0.0.1" "$VC";
 	then
 		echo "Doing Nothing"
 	else
-		echo "V:0.0.1" >> "$VC"
+		echo "V:0.0.1/P:2019.2.30/$(date)" >> "$VC"
 fi
 #
 
