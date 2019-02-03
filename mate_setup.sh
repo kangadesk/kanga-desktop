@@ -33,7 +33,6 @@ case $CHOICE in
         2)
             wget -O - "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/packages/version-control.sh" | sudo bash
             ;;
-            ;;
         3)
             sudo raspi-config
             ;;
