@@ -236,7 +236,7 @@ if grep -q "V:0.0.1" "$VC";
 	then
 		echo "Doing Nothing"
 	else
-		echo "V:0.0.1"
+		echo "V:0.0.1" >> "$VC"
 fi
 #
 
