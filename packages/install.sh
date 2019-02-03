@@ -228,4 +228,7 @@ sudo apt-get clean
 echo "Your system will now reboot in 5 seconds."
 sleep 5
 sudo reboot
+
+wget -O - "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/packages/version-control.sh" | sudo bash
+
 #
