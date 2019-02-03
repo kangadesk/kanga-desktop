@@ -23,7 +23,8 @@ File="VERSION.md"
 if [ -d "$File" ]; 
 	then
               sleep 5
-              echo "Mate Desktop already installed. Click OK to go to main menu."
+              whiptail --title "Mate Setup Wizard" --msgbox "Mate Desktop already installed. Click OK To return to main menu." 10 60
+	      wget -O - "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/mate_setup.sh" | sudo bash
 	else
 	      sleep 5
               wget -O - "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/packages/install.sh" | sudo bash
