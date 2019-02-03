@@ -202,21 +202,9 @@ if grep -q "ImageDir=/usr/share/plymouth/themes/pix" "$PP";
 		echo "Doing Nothing"
 fi
 #
-
 wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/README.md" -O /opt/kangadesk/README.md
 wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/opt/kangadesk/splash.png" -O /opt/kangadesk/splash.png
 wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/opt/kangadesk/boot.png" -O /opt/kangadesk/boot.png
-
-cd /opt/kangadesk/
-File="VERSION.md"
-
-if [ -d "$File" ]; 
-	then
-                echo "Version File already exists. Doing nothing."
-	else
-		wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/opt/kangadesk/VERSION.md"
-		echo "Version File created."
-fi
 #
 
 }| whiptail --gauge "Moving Files" 6 60 0
