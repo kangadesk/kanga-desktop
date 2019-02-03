@@ -15,4 +15,4 @@ NOTE
 
 2. Before installing the necessary addons to run your Mate, the updater will run through the system update process on your system. No need to run these commands: apt-get update, apt-get upgrade, apt-get dist-upgrade
 
-# version: 0.0.1 "Cave"
+# version: 0.0.1
