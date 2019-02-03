@@ -13,7 +13,7 @@ CHOICE_HEIGHT=4
 TITLE="Mate Setup Wizard"
 MENU="Choose one of the following options:"
 
-OPTIONS=(1 "Install Mate Add-on Packages"
+OPTIONS=(1 "Install Mate Packages"
          2 "Check For Available Updates"
          3 "Configure Mate Settings"
          4 "Configure Raspi Settings")
