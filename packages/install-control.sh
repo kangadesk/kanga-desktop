@@ -26,6 +26,6 @@ if [ -d "$File" ];
               sleep 5
               echo "Mate Desktop already installed. Click OK to go to main menu."
 	else
-		          sleep 5
+	      sleep 5
               wget -O - "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/packages/install.sh" | sudo bash
 fi
