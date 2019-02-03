@@ -1,5 +1,6 @@
 Updated: 2019.1.30
 # mateDesktop Setup
+# version: 0.0.1 "Cove"
 
 This Guide will take you through the steps of updating your Kangadesk Mate.
 
