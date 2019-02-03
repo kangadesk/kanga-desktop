@@ -239,7 +239,7 @@ if grep -q "V:0.0.1" "$VC";
 		echo "V:0.0.1/P:2019.2.30/$(date)" >> "$VC"
 fi
 
-wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/mate_setup.sh" -O /opt/mate/setup.sh
+wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/opt/mate/setup.sh" -O /opt/mate/setup.sh
 cd /opt/mate/
 sudo chmod +x setup.sh
 
