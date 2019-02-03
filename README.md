@@ -9,6 +9,7 @@ To get started with the installer, please run the line of code below inside of a
 wget -O - "https://raw.githubusercontent.com/pilelu/mate-desktop/master/mate_setup.sh" | sudo bash
 
 To update your mateDesktop, simply double click on setup.sh located within /opt/mate directory.
+
 NOTE
 ----------------------
 1. Make sure your Mate is connected to a reliable internet connection before running the updater.
