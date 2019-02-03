@@ -34,6 +34,6 @@ if grep -q "V:0.0.1" "$File";
     		wget -O - "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/mate_setup.sh" | sudo bash
 	else
 		sleep 5
-		whiptail --title "Mate Setup Wizard" --msgbox "Mate Desktop Not Detected. Click OK to install." 10 60
-		wget -O - "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/packages/install.sh" | sudo bash
+		whiptail --title "Mate Setup Wizard" --msgbox "Mate Desktop Not Detected. Please install it from the main menu." 10 60
+		wget -O - "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/mate_setup.sh" | sudo bash
 fi
