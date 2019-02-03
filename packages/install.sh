@@ -30,7 +30,7 @@ sudo apt-get install -y fbi
 echo "Please wait for the updater to finish installing updates..."
 sleep 8
 
-whiptail --title "Kangadesk Setup" --msgbox "Click OK to update the necessary addon packages for your Kangadesk Mate." 10 60
+whiptail --title "Mate Setup" --msgbox "Click OK to update the necessary addon packages for your MateDesktop." 10 60
 
 #Update Firmware
 {
@@ -52,27 +52,27 @@ if grep -q "enable_uart=1" "$File";
 fi
 #
 
-#Create Kangadesk Directory
+#Create Mate Directory
 cd /opt/
-directory="/opt/kangadesk"
+directory="/opt/mate"
 
 if [ -d "$directory" ]; 
 	then
                 echo "Directory already exists. Doing nothing."
 	else
-		sudo mkdir kangadesk
+		sudo mkdir mate
 fi
 #
 
 #Install SafePowerOff Script
-cd /opt/kangadesk
+cd /opt/mate
 script=shutdown.py
 
 if [ -e $script ];
 	then
 		echo "Shutdown Script already exists. Doing nothing."
 	else
-		wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/opt/kangadesk/shutdown.py"
+		wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/opt/mate/shutdown.py"
 fi
 #
 
@@ -80,11 +80,11 @@ fi
 cd /etc/
 RC=rc.local
 
-if grep -q "sudo python3 \/opt\/kangadesk\/shutdown.py \&" "$RC";
+if grep -q "sudo python3 \/opt\/mate\/shutdown.py \&" "$RC";
 	then
 		echo "File /etc/rc.local already configured. Doing nothing."
 	else
-		sed -i -e "s/^exit 0/sudo python3 \/opt\/kangadesk\/shutdown.py \&\n&/g" "$RC"
+		sed -i -e "s/^exit 0/sudo python3 \/opt\/mate\/shutdown.py \&\n&/g" "$RC"
 		echo "File /etc/rc.local configured."
 fi
 #
@@ -161,7 +161,7 @@ if [ -d "$File" ];
 	then
                 echo "Boot File already exists. Doing nothing."
 	else
-		wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/etc/systemd/system/boot.service"
+		wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/etc/systemd/system/boot.service"
 		echo "boot.service created."
 fi
 #
@@ -178,17 +178,17 @@ fi
 
 sudo mkdir rpd-wallpaper
 cd /usr/share/rpd-wallpaper
-wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/rpd-wallpaper/aurora.jpg"
-wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/rpd-wallpaper/balloon.jpg"
-wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/rpd-wallpaper/bridge.jpg"
-wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/rpd-wallpaper/canyon.jpg"
-wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/rpd-wallpaper/cliff.jpg"
-wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/rpd-wallpaper/clouds.jpg"
-wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/rpd-wallpaper/fisherman.jpg"
-wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/rpd-wallpaper/fjord.jpg"
-wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/rpd-wallpaper/road.jpg"
-wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/rpd-wallpaper/sand.jpg"
-wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/rpd-wallpaper/waterfall.jpg"
+wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/aurora.jpg"
+wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/balloon.jpg"
+wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/bridge.jpg"
+wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/canyon.jpg"
+wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/cliff.jpg"
+wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/clouds.jpg"
+wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/fisherman.jpg"
+wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/fjord.jpg"
+wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/road.jpg"
+wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/sand.jpg"
+wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/waterfall.jpg"
 
 
 #Change Plymouth Splash .png Location
@@ -197,14 +197,14 @@ PP=pix.plymouth
 
 if grep -q "ImageDir=/usr/share/plymouth/themes/pix" "$PP";
 	then
-		sudo sed -i -e "s/ImageDir=\/usr\/share\/plymouth\/themes\/pix/ImageDir=\/opt\/kangadesk/g" "$PP"
+		sudo sed -i -e "s/ImageDir=\/usr\/share\/plymouth\/themes\/pix/ImageDir=\/opt\/mate/g" "$PP"
 	else
 		echo "Doing Nothing"
 fi
 #
-wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/README.md" -O /opt/kangadesk/README.md
-wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/opt/kangadesk/splash.png" -O /opt/kangadesk/splash.png
-wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/opt/kangadesk/boot.png" -O /opt/kangadesk/boot.png
+wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/README.md" -O /opt/mate/README.md
+wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/opt/mate/splash.png" -O /opt/mate/splash.png
+wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/opt/mate/boot.png" -O /opt/mate/boot.png
 #
 
 }| whiptail --gauge "Moving Files" 6 60 0
@@ -217,7 +217,7 @@ wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/opt/kan
         echo $i
     done
 
-cd /opt/kangadesk/
+cd /opt/mate/
 VC=VERSION.md
 
 
@@ -226,7 +226,7 @@ if [ -d "$VC" ];
 	then
                 echo "File already exists. Doing nothing."
 	else
-		wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/opt/kangadesk/VERSION.md"
+		wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/opt/mate/VERSION.md"
 		echo "File created."
 fi
 
@@ -245,12 +245,12 @@ fi
 #
 
 #Reboot Kangadesk Mate
-whiptail --title "Setup Complete" --msgbox "Mate Addons Installed Successfully. Please Reboot System For Changes To Take Effect" 10 60
+whiptail --title "Setup Complete" --msgbox "MateDesktop Installed Successfully. Please Reboot System For Changes To Take Effect" 10 60
 sudo systemctl enable boot.service
 sudo systemctl start boot.service
 sudo apt-get clean
 
 sleep 5
-wget -O - "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/mate_setup.sh" | sudo bash
+wget -O - "https://raw.githubusercontent.com/pilelu/mate-desktop/master/mate_setup.sh" | sudo bash
 
 #
