@@ -15,9 +15,8 @@ MENU="Choose one of the following options:"
 
 OPTIONS=(1 "Install Mate Packages"
          2 "Check For Available Updates"
-         3 "Configure Mate Settings"
-         4 "Configure Raspi Settings"
-         5 "Reboot")
+         3 "Configure Raspi Settings"
+         4 "Reboot")
 
 CHOICE=$(whiptail --clear \
                 --title "$TITLE" \
@@ -34,13 +33,11 @@ case $CHOICE in
         2)
             wget -O - "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/packages/version-control.sh" | sudo bash
             ;;
-        3)
-            echo "You chose Option 3"
             ;;
-        4)
+        3)
             sudo raspi-config
             ;;
-        5)
+        4)
             whiptail --title "Mate Setup Wizard" --msgbox "Please save your work before rebooting. Click OK to reboot." 10 60
             echo "Rebooting in 8 seconds..."
             sleep 8
