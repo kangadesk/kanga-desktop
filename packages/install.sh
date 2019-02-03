@@ -232,17 +232,18 @@ if [ -d "$VC" ];
 		echo "File created."
 fi
 
-
-
-
 if grep -q "V:0.0.1" "$VC";
 	then
 		echo "Doing Nothing"
 	else
 		echo "V:0.0.1/P:2019.2.30/$(date)" >> "$VC"
 fi
-#
 
+wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/mate_setup.sh" -O /opt/mate/setup.sh
+cd /opt/mate/
+sudo chmod +x setup.sh
+
+#
 }| whiptail --gauge "Finishing Up" 6 60 0
 #
 
