@@ -7,7 +7,24 @@ if [[ $EUID -ne 0 ]]; then
 fi
 #
 
-cd /etc/os-release
+cd /etc/
+File=os-release
+if grep -q "Raspbian" "$File";
+	then
+		sleep 5
+    		whiptail --title "Mate Setup Wizard" --msgbox "System not supported. Click OK To return to main menu." 10 60
+    		wget -O - "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/mate_setup.sh" | sudo bash
+	else
+		sleep 5
+		echo "Checking system"
+fi
+
+{
+    for ((i = 0 ; i <= 100 ; i+=20)); do
+        sleep 1
+        echo $i
+    done
+}| whiptail --gauge "Checking For Updates" 6 60 0    
 
 cd /opt/kangadesk/
 File=VERSION.md
