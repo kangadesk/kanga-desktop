@@ -20,7 +20,6 @@ fi
 
 cd /opt/kangadesk/
 File="VERSION.md"
-
 if [ -d "$File" ]; 
 	then
               sleep 5
