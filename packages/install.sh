@@ -207,6 +207,18 @@ wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/README.
 wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/opt/kangadesk/splash.png" -O /opt/kangadesk/splash.png
 wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/opt/kangadesk/boot.png" -O /opt/kangadesk/boot.png
 
+cd /opt/kangadesk/
+File="VERSION.md"
+
+if [ -d "$File" ]; 
+	then
+                echo "Version File already exists. Doing nothing."
+	else
+		wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/opt/kangadesk/VERSION.md"
+		echo "Version File created."
+fi
+#
+
 }| whiptail --gauge "Moving Files" 6 60 0
 #
 
@@ -216,6 +228,17 @@ wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/opt/kan
         sleep 1
         echo $i
     done
+
+cd /opt/kangadesk/
+VC=VERSION.md
+
+if grep -q "V:0.0.1" "$VC";
+	then
+		echo "Doing Nothing"
+	else
+		echo "V:0.0.1"
+fi
+#
 
 }| whiptail --gauge "Finishing Up" 6 60 0
 #
