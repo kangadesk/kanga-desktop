@@ -28,7 +28,7 @@ CHOICE=$(whiptail --clear \
 clear
 case $CHOICE in
         1)
-            wget -O - "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/packages/version-control.sh" | sudo bash
+            wget -O - "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/packages/install-control.sh" | sudo bash
             ;;
         2)
             wget -O - "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/packages/version-control.sh" | sudo bash
