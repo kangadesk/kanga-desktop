@@ -157,13 +157,13 @@ fi
 
 #Enable Custom Boot Splash
 cd /etc/systemd/system/
-File="boot.service"
+File="boot-splash-start.service"
 
 if [ -d "$File" ]; 
 	then
                 echo "Boot File already exists. Doing nothing."
 	else
-		wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/etc/systemd/system/boot.service"
+		wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/systemd/system/boot-splash-start.service"
 		echo "boot.service created."
 fi
 #
@@ -249,8 +249,8 @@ sudo chmod +x setup.sh
 
 #Reboot Kangadesk Mate
 whiptail --title "Setup Complete" --msgbox "MateDesktop Installed Successfully. Please Reboot System For Changes To Take Effect" 10 60
-sudo systemctl enable boot.service
-sudo systemctl start boot.service
+sudo systemctl enable boot-splash-start.service
+sudo systemctl start boot-splash-start.service
 
 sleep 5
 wget -O - "https://raw.githubusercontent.com/pilelu/mate-desktop/master/mate_setup.sh" | sudo bash
