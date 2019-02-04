@@ -182,7 +182,6 @@ sudo mkdir rpd-wallpaper
 cd /usr/share/rpd-wallpaper
 wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/aurora.jpg"
 wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/balloon.jpg"
-wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/bridge.jpg"
 wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/canyon.jpg"
 wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/cliff.jpg"
 wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/clouds.jpg"
@@ -192,6 +191,8 @@ wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpa
 wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/sand.jpg"
 wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/waterfall.jpg"
 
+cd /usr/share/wallpapers
+wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/bridge.jpg" 
 
 #Change Plymouth Splash .png Location
 cd /usr/share/plymouth/themes/pix/
