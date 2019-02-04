@@ -1,12 +1,14 @@
 [Unit]
-Description=Boot screen
+Description=Start Mate Splash Boot screen
 DefaultDependencies=no
-After=local-fs.target
+After=network.target
 
 [Service]
-ExecStart=/usr/bin/fbi -d /dev/fb0 --noverbose -a /opt/mate/boot.png
-StandardInput=tty
-StandardOutput=tty
+StandardOutput=journal
+Restart=no
+RemainAfterExit=yes
+ExecStart=/opt/mate/boot.png
+TimeoutSec=0
 
 [Install]
 WantedBy=sysinit.target
