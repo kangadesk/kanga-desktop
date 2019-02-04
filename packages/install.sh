@@ -178,21 +178,9 @@ if [ -d "$directory" ];
 		echo "Directory doesn't exist. Please create it."
 fi
 
-sudo mkdir rpd-wallpaper
-cd /usr/share/rpd-wallpaper
-wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/aurora.jpg"
-wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/balloon.jpg"
-wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/canyon.jpg"
-wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/cliff.jpg"
-wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/clouds.jpg"
-wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/fisherman.jpg"
-wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/fjord.jpg"
-wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/road.jpg"
-wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/sand.jpg"
-wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/waterfall.jpg"
-
 cd /usr/share/wallpapers
-wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/rpd-wallpaper/bridge.jpg" 
+wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/wallpapers/cove.png" 
+wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/wallpapers/cove-2.png"
 
 #Change Plymouth Splash .png Location
 cd /usr/share/plymouth/themes/pix/
