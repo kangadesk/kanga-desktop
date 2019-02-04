@@ -163,7 +163,7 @@ if [ -d "$File" ];
 	then
                 echo "Boot File already exists. Doing nothing."
 	else
-		wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/systemd/system/boot-splash-start.service"
+		wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/systemd/system/boot-splash-start.service" -O /etc/systemd/system/boot-splash-start.service
 		echo "boot.service created."
 fi
 #
