@@ -1,12 +1,5 @@
 #!/bin/bash
 
-#Run As Root
-if [[ $EUID -ne 0 ]]; then
-   echo "Please run updater as root." 
-   exit 1
-fi
-#
-
 echo "Please wait for the updater to finish installing updates..."
 sleep 8
 
