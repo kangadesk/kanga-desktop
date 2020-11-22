@@ -2,7 +2,7 @@
 
 cd /etc/
 File="os-release"
-if grep -q "bian" "$File";
+if grep -q "ubuntu" "$File";
 	then
 		sleep 5
 	else
