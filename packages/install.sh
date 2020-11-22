@@ -176,19 +176,19 @@ wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/wallpapers
 wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/wallpapers/cove-2.png"
 
 #Change Plymouth Splash .png Location
-cd /usr/share/plymouth/themes/pix/
-PP=pix.plymouth
+cd /usr/share/plymouth/themes/elementary/
+EP=elementary.plymouth
 
-if grep -q "ImageDir=/usr/share/plymouth/themes/pix" "$PP";
+if grep -q "ImageDir=/usr/share/plymouth/themes/elementary" "$EP";
 	then
-		sudo sed -i -e "s/ImageDir=\/usr\/share\/plymouth\/themes\/pix/ImageDir=\/opt\/mate/g" "$PP"
+		sudo sed -i -e "s/ImageDir=\/usr\/share\/plymouth\/themes\/elementary/ImageDir=\/opt\/mate/g" "$EP"
 	else
 		echo "Doing Nothing"
 fi
 #
-wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/README.md" -O /opt/mate/README.md
-wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/opt/mate/splash.png" -O /opt/mate/splash.png
-wget -q "https://raw.githubusercontent.com/pilelu/mate-desktop/master/opt/mate/boot.png" -O /opt/mate/boot.png
+wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/README.md" -O /opt/mate/README.md
+wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/opt/mate/splash.png" -O /opt/mate/logo.png
+wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/opt/mate/boot.png" -O /opt/mate/logo_blurred.png
 #
 
 }| whiptail --gauge "Moving Files" 6 60 0
