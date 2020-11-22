@@ -187,8 +187,8 @@ if grep -q "ImageDir=/usr/share/plymouth/themes/elementary" "$EP";
 fi
 #
 wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/README.md" -O /opt/mate/README.md
-wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/opt/mate/splash.png" -O /opt/mate/logo.png
-wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/opt/mate/boot.png" -O /opt/mate/logo_blurred.png
+wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/assets/boot/static.png" -O /opt/mate/logo.png
+wget -q "https://raw.githubusercontent.com/kangadesk/mate-desktop/master/assets/boot/static.png" -O /opt/mate/logo_blurred.png
 #
 
 }| whiptail --gauge "Moving Files" 6 60 0
