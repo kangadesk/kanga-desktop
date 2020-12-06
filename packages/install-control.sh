@@ -2,7 +2,7 @@
 
 cd /etc/
 File="os-release"
-if grep -q "ubuntu" "$File";
+if grep -q "debian" "$File";
 	then
 		sleep 5
 	else
